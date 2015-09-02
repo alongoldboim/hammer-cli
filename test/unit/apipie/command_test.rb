@@ -1,4 +1,6 @@
 require File.join(File.dirname(__FILE__), '../test_helper')
+
+
 describe HammerCLI::Apipie::Command do
 
   class TestCommand < HammerCLI::Apipie::Command
@@ -149,8 +151,6 @@ describe HammerCLI::Apipie::Command do
       params = cmd_opt.class.resource.action(:create).params
       cmd_opt.method_options_for_params(params, {}).must_equal({"architecture"=>{"name"=>"test_name"}})
     end
-
-
 
   end
 
